@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+html {
+  box-sizing: border-box;
+}
+.app-container{
+  padding: 15px;
+  overflow: auto;
+  min-height: calc(100vh - 65px);
+  max-height: calc(100vh - 65px);
+}
+.app-container .page-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.page-header .title-text {
+  color: #002539;
+  text-transform: capitalize;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+}
+.page-header {
+  margin-bottom: 15px;
+}

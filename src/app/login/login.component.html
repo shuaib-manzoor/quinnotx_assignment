@@ -1,0 +1,76 @@
+<div class="container-sm login-container">
+    <div>
+        <div class="d-md-flex align-items-center">
+            <div class="z-index-2">
+                <div class="login-form bg-white">
+                    <h4><span>Already Have an Account?</span></h4>
+                    <form class="login_form mt-3" [formGroup]="loginForm" autocomplete="off" novalidate="novalidate"
+                        id="login_form">
+                        <div class="form-group position-relative">
+                            <span class="input-group-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="22" height="22" viewBox="0 0 31 24">
+                                    <image id="email" width="25" height="25"
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAYCAYAAAACqyaBAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDQ2MCwgMjAyMC8wNS8xMi0xNjowNDoxNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxYzhmM2Y1MS1kMmM2LTI3NDktYTIwMy01OGJhNWNhZGE3ZWQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUU5NkI0RDczRDBGMTFFQjk3OTA4Qjc1ODYzRDM1OTgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUU5NkI0RDYzRDBGMTFFQjk3OTA4Qjc1ODYzRDM1OTgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NWQ5NzRkNTYtZDU0ZS00Mjg4LWJiMWYtN2JmNGY5MTFkNmI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFjOGYzZjUxLWQyYzYtMjc0OS1hMjAzLTU4YmE1Y2FkYTdlZCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pl7nmvoAAAJjSURBVHjavJbbS1RRFMaP01DSlQrpDwgRgoJApCCTLhNFWVRGRQhFVOCDBZEgWihaIFKRJhoZPaSEUlAhdL8Q9VD0ID5UDxY+iEQKWpFdQOq34JvYmDNznDnjBz9nnLPZ39lrrb3XzmhsavFQDlyCFTDDS68GoRVOhvkTgtt6gTH4mEbjWbAIymHAzLNlbJoGDXAhDcbz4IHMTYW26un655lCch6OBGw8E7ogDzqjv4WcAe9gA4xAM+wPyDhTaV0Fd6A4+iA0bmA3bISvKoo9KRpbVG/AeoV8F/yOZW56DZvhJ7TBjiSNrX7aNddz2O4axzI3vbSCgF9wXRNMRjbvVSiCV5prdKJBsfTUWfVNiPg0zoAW5dZNozcZc9N95ckmvAUFPszPwSF46xSwl4y5pwrdp5PPtsvKOGNr4Rj0KlKDiXLjR1axB2A23IXcCcZUQgX0wzo7wfwUhl/lOieVpWOZ88xWW6Pvc5xTLBDzOihVOG118+ERLIHDyrOFuArmKjpLE00a9mF8CsqgD9YorD9kaPt3AXxRcVl1D0EjPIbV8D7ZlR+HahlG9Onp/LccL4Rv2k7detYEJyALHsLiZFZeAvUKZ0Qhd3Vav32AN+OenVVxVik9+c6LJzS3yr4IwzqXY4WuI87LV6t/WxSeKAWfEoV9N1zWqbQJelJoLGXKf7YaS1Y8821wTWf6FjWZVHUUrqj672mr/hd2u78d1FVqK7wIqJ//0eXELhR7tQ3/mX/X9+VqeUXaJkFqTI0mU63V9DmsC6MVxFo1/y5vatQZDftOOKM7Vro1qmtax18BBgAoOYHsKX5wnAAAAABJRU5ErkJggg==" />
+                                </svg>
+                            </span>
+                            <input autocomplete="off" class="form-control"
+                                [ngClass]="{ 'is-invalid': f.username?.errors && submitted }" type="email"
+                                formControlName="username" name="email" placeholder="Provide your email" />
+                            <span *ngIf="f.username?.errors?.required && submitted"
+                                class="invalid-feedback d-block error">This field is
+                                required</span>
+                            <span class="invalid-feedback d-block mb-3 error"
+                                *ngIf="f.username?.errors && submitted &&(f.username?.errors?.pattern || f.username?.errors?.email)">
+                                Please enter a valid email Id
+                            </span>
+                        </div>
+                        <div class="form-group position-relative">
+                            <span class="input-group-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="22" height="22" viewBox="0 0 31 31">
+                                    <image id="password" width="26" height="26"
+                                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDYuMC1jMDAyIDc5LjE2NDQ2MCwgMjAyMC8wNS8xMi0xNjowNDoxNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxYzhmM2Y1MS1kMmM2LTI3NDktYTIwMy01OGJhNWNhZGE3ZWQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUU5NkI0RDMzRDBGMTFFQjk3OTA4Qjc1ODYzRDM1OTgiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUU5NkI0RDIzRDBGMTFFQjk3OTA4Qjc1ODYzRDM1OTgiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NGQ0MzUzYTMtNzM0Yi0yNjQ5LTg1MDAtZjlkMGNjZWFjODQyIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFjOGYzZjUxLWQyYzYtMjc0OS1hMjAzLTU4YmE1Y2FkYTdlZCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pj8z5UQAAAKSSURBVHjavJdLSFRRGMevt0kpa0goaGMmNZS0chFTpKI9LOy17g0tSjQD27QwEaIU3SimES10IQkuej/pARERvSgfC11o2AMUmghbaOQj/x/8Bw6HmXvn3DvjgR/nO+eey2/OPc9Ju9J+zfKZ0kAZOACywBfQDfrdXgz4FGeCHrBXqz8PnoMa8D7ey7YP8TLwWBEPgnvgJ8s7wVvQxh+ZNPlyigtZvgQ2gYMgB1SB7xySSvABrE2GPEhxAct1oBb8Z3mKvd0IWlifB16BXD9yET8C2xTxxThtJ0E1OAb+gWxwn8NlLE8HdxRxrYO4kHNhEbgBTvILyNA0eZFXgBLGNRznWKmKn/gB6GCd/IBmxuVgq6n8CHOZ0fUO7fYrcZkSXwAjnISNpvIc5i9c2t1S4rtKPMU5Eh2WLSbyMeb5Lu1kywyDUnBKeyYb0jfGx03kN5kfBetd2squ9gzMafUz4CXjkIlc1u4fbsl1PnbGNcx/m8g3g8WM13kUnwHFjJ8kKt8NboMlYJzr1jTJUm1l/A502R7EstaHPPS4jcusj8txOrBA4lZFLKddxG2dJyrO4uWhAazUnp1VxL2q2OkyYdJjmUCHlF5eBwOsP8H6z2AX+OV2kzH91HK8toPTPLHOac8/gj26ONZn9zLGf9ljObOvgh88wUZ56hXFEus9dxKHeVqlszwNOnlPi6Zh3loqE52JgTji7VqPL4Md2rshTW6cRL6KJ5EqHtTaZTCXI/ET4y6/d26RrwZLWT6siPN4a7HZRtJT7lRJSfpsjyj1b8AK7fmclcRkO/wZ0MUTvBpZqep5kDtWUKnbBx5aKUi6/LW1gMnmDJ+M83wWfE2VPMD/VvLvYkOM56PcPFKS5gUYAOI5lEBTAbbCAAAAAElFTkSuQmCC" />
+                                </svg>
+                            </span>
+                            <input autocomplete="off" class="form-control" [type]="fieldTextType ? 'text' : 'password'"
+                                [ngClass]="{ 'is-invalid': f.password.errors && submitted }" formControlName="password"
+                                name="password" placeholder="Password" />
+                            <span class="fa eye-toggle cursor-pointer"
+                                [ngClass]="{'fa-eye-slash': !fieldTextType,'fa-eye': fieldTextType}"
+                                (click)="toggleFieldTextType()">
+                            </span>
+                            <span *ngIf="f.password?.errors?.required && submitted"
+                                class="invalid-feedback d-block error">This field is
+                                required</span>
+                        </div>
+                        <div class="text-center">
+                            <button (click)="onSubmit()" class="btn login-left-button">
+                                Log In
+                            </button>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col-12">
+                            <i class="fa fa-info" style="cursor: pointer;" title="For testing, you can use email as 'quinnox@gmail.com' and password as '123456'"></i>
+                        </div>
+                    </div>
+                </div>
+                <span class="d-none d-md-block mt-4 text-center text-muted font-12"><span style="font-size: 12px;"
+                        class="border-right d-inline-block mr-2 pr-2">Version {{environment.appVersion}}</span> Powered
+                    By <img width="80" src="https://www.quinnox.com/wp-content/uploads/2022/06/LOGO.svg" alt="Image" />
+                </span>
+            </div>
+            <div class="login-right">
+                <div class="align-items-center d-flex mb-4 pb-3">
+                    <img src="https://www.quinnox.com/wp-content/uploads/2022/06/LOGO.svg" alt="SafetyAware"
+                        class="logo img-fluid" width="250" />
+                </div>
+                <div class="login-content">
+                    <a href="javascript:void(0)" class="btn login-right-button" (click)="noFeature()">Create New
+                        Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
