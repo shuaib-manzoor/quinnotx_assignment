@@ -1,9 +1,11 @@
 <div class="page-content">
     <div class="page-header d-flex justify-content-between">
         <div class="title-text">Engineers List</div>
+        <div class="title-text"><a routerLink="/report">See Reports</a></div>
     </div>
     <div class="row">
         <div class="col-12">
+            <input type="text" name="" value="">
             <div class="card">
                 <div class="card-body" *ngIf="!refreshing && engineers.length > 0; else loading">
                     <table datatable [dtOptions]="dtOptions" class="row-border hover">

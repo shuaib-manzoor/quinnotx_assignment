@@ -10,7 +10,7 @@ let observables: Array<Subscription> = []
   styleUrls: ['./engineers-list.component.css']
 })
 export class EngineersListComponent implements OnInit {
-  engineers: Array<any> = [];
+  engineers: any = [];
   dtOptions: DataTables.Settings = {};
   refreshing = false;
 
@@ -23,11 +23,12 @@ export class EngineersListComponent implements OnInit {
     this.getEngineersData()
   }
 
-  getEngineersData() {
-    let s1 = this.dataService.getEngineers().subscribe((resp: any) => {
-      this.engineers = resp
-    })
-    observables.push(s1);
+  async getEngineersData() {
+    // let s1 = this.dataService.getEngineers().subscribe((resp: any) => {
+    //   this.engineers = resp
+    // })
+    // observables.push(s1);
+    this.engineers = await this.dataService.getEngineers();
   }
 
   deleteEngineer(id: string) {
@@ -52,7 +53,7 @@ export class EngineersListComponent implements OnInit {
         })
         setTimeout(() => {
           Swal.close();
-          this.engineers = this.engineers.filter(x => x.id != id);
+          // this.engineers = this.engineers.filter(x => x.id != id);
           this.refreshing = true;
           setTimeout(() => {
             this.refreshing = false;
